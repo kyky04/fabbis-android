@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.RegisterActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/spacing_large">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_large">
+
+            <Button
+                android:id="@+id/btn_login"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="@drawable/rect_white"
+                android:text="Log In"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="QINS"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/lipsum_medium"
+                android:textColor="@color/white" />
+
+            <RelativeLayout
+                android:id="@+id/btn_facebook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xlarge"
+                android:background="@drawable/btn_rounded">
+
+                <ImageView
+                    android:id="@+id/img_fb"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/spacing_xlarge"
+                    android:background="#0000"
+                    android:clickable="false"
+                    android:src="@drawable/ic_facebook" />
+
+                <TextView
+                    android:id="@+id/tv_fb"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="#0000"
+                    android:clickable="false"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Lanjut dengan Facebook"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimary" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btn_google"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:background="@drawable/btn_rounded">
+
+                <ImageView
+                    android:id="@+id/img_google"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/spacing_xlarge"
+                    android:background="#0000"
+                    android:clickable="false"
+                    android:src="@drawable/ic_search" />
+
+                <TextView
+                    android:id="@+id/tv_google"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="#0000"
+                    android:clickable="false"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Lanjut dengan Google"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimary" />
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/btn_daftar"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xlarge"
+                android:background="@drawable/btn_rounded"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Buat akun baru"
+                android:textAllCaps="false"
+                android:textColor="#003F7F" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/lipsum_large"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

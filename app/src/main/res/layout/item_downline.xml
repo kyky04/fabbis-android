@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/spacing_large">
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/spacing_medium">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/pic_user" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_medium"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/FontStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jhon Doe"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                style="@style/FontStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rp. 100.000,-" />
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_arrow_rigth" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:background="@color/grey_500" />
+
+</LinearLayout>

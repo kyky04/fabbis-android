@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/spacing_large">
+
+    <TextView
+        android:id="@+id/tv_date"
+        style="@style/FontStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:text="Senin, 2 Nov 2018" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:orientation="horizontal"
+        android:padding="@dimen/spacing_medium">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_wallet_home" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_medium"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_no_transaksi"
+                style="@style/FontStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NO.21312321"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/tv_total"
+                style="@style/FontStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rp. 100.000,-" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_status"
+            style="@style/FontStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/spacing_medium"
+            android:background="@drawable/bg_rounded"
+            android:padding="@dimen/spacing_medium"
+            android:text="PAY"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:background="@color/grey_500" />
+
+</LinearLayout>

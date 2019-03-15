@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_dialog"
+
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center"
+            android:padding="@dimen/spacing_large"
+            android:text="INPUT TANGGAL"
+            android:textSize="@dimen/spacing_large" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_large">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Tanggal" />
+
+                    <EditText
+                        android:id="@+id/et_tanggal"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/et_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:padding="@dimen/spacing_large"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_marginTop="@dimen/spacing_large"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Pertemuan" />
+
+                    <EditText
+                        android:id="@+id/et_pertemuan"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/et_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="number"
+                        android:padding="@dimen/spacing_large"
+                        android:textSize="13sp" />
+
+
+                    <Button
+                        android:id="@+id/btn_save"
+                        android:layout_width="300dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="@dimen/spacing_xxxlarge"
+                        android:background="@color/colorPrimary"
+                        android:text="SAVE"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    tools:context=".fragments.Sample">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_medium">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="FABBIS UIN SGD"
+                android:textSize="34dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Team Selection"
+                android:textSize="@dimen/sp_12" />
+
+
+            <LinearLayout
+                android:id="@+id/lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_foto"
+                    android:layout_width="77dp"
+                    android:layout_height="77dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/pic_user" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_nama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lay"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Rizki Fauzi Rahman"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tv_nim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_nama"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="1137050194"
+                android:textSize="20dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_nama"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Dribble (Membawa Bola)" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Change of pace" />
+
+                    <EditText
+                        android:id="@+id/et_dribble1"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/et_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="number"
+                        android:padding="@dimen/spacing_large"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Low or Control" />
+
+                    <EditText
+                        android:id="@+id/et_dribble2"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/et_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="number"
+                        android:padding="@dimen/spacing_large"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="High Speed" />
+
+                    <EditText
+                        android:id="@+id/et_dribble3"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/et_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="number"
+                        android:padding="@dimen/spacing_large"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Cross Over" />
+
+                    <EditText
+                        android:id="@+id/et_dribble4"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/et_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="number"
+                        android:padding="@dimen/spacing_large"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Behind the back" />
+
+                    <EditText
+                        android:id="@+id/et_dribble5"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/et_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="number"
+                        android:padding="@dimen/spacing_large"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Between the legs" />
+
+                    <EditText
+                        android:id="@+id/et_dribble6"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/et_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="number"
+                        android:padding="@dimen/spacing_large"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Reverse" />
+
+                    <EditText
+                        android:id="@+id/et_dribble7"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/et_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="number"
+                        android:padding="@dimen/spacing_large"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Pivot" />
+
+                    <EditText
+                        android:id="@+id/et_dribble8"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/et_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="number"
+                        android:padding="@dimen/spacing_large"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Shooting" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Set shoot" />
+
+                    <EditText
+                        android:id="@+id/et_shoot1"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/et_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="number"
+                        android:padding="@dimen/spacing_large"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Lay Up" />
+
+                    <EditText
+                        android:id="@+id/et_shoot2"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/et_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="number"
+                        android:padding="@dimen/spacing_large"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Jump Shoot" />
+
+                    <EditText
+                        android:id="@+id/et_shoot3"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/et_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="number"
+                        android:padding="@dimen/spacing_large"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Hook shoot" />
+
+                    <EditText
+                        android:id="@+id/et_shoot4"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/et_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="number"
+                        android:padding="@dimen/spacing_large"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Passing" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Chest pass" />
+
+                    <EditText
+                        android:id="@+id/et_pass1"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/et_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="number"
+                        android:padding="@dimen/spacing_large"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Bounce pass" />
+
+                    <EditText
+                        android:id="@+id/et_pass2"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/et_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="number"
+                        android:padding="@dimen/spacing_large"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Overhead pass" />
+
+                    <EditText
+                        android:id="@+id/et_pass3"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/et_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="number"
+                        android:padding="@dimen/spacing_large"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Baseball pass" />
+
+                    <EditText
+                        android:id="@+id/et_pass4"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/et_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="number"
+                        android:padding="@dimen/spacing_large"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Defence" />
+
+                    <EditText
+                        android:id="@+id/et_defence"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/et_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="number"
+                        android:padding="@dimen/spacing_large"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Serangan" />
+
+                    <EditText
+                        android:id="@+id/et_serangan"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/et_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="number"
+                        android:padding="@dimen/spacing_large"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Speed" />
+
+                    <EditText
+                        android:id="@+id/et_speed"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/et_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="number"
+                        android:padding="@dimen/spacing_large"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/lay_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_cancel"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="CANCEL"
+                        android:textAllCaps="false"
+                        android:textColor="@color/red_500" />
+
+                    <Button
+                        android:id="@+id/btn_simpan"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="SIMPAN"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

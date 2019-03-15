@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/spacing_large"
+    app:cardCornerRadius="4dp"
+    app:cardUseCompatPadding="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/spacing_medium">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_foto"
+            android:layout_width="77dp"
+            android:layout_height="77dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/pic_user" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/spacing_medium"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_nama_pemain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Rizki Fauzi Rahman"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/tv_nim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:text="75188004" />
+
+            <TextView
+                android:id="@+id/tv_berat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TB = 168 , BB = 68" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_posisi"
+            style="@style/FontStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/spacing_medium"
+            android:background="@drawable/bg_rounded"
+            android:padding="@dimen/spacing_medium"
+            android:text="PG"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
