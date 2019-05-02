@@ -10,8 +10,7 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,10 +31,10 @@
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/img_foto"
-                    android:layout_width="77dp"
-                    android:layout_height="77dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_centerHorizontal="true"
-                    android:src="@drawable/pic_user" />
+                    android:src="@drawable/ic_camera" />
 
             </LinearLayout>
 
@@ -65,7 +64,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_nama_lengkap"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:inputType="text"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -83,7 +83,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_nim"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:inputType="number"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -101,7 +102,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_tinggi"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:inputType="number"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -119,7 +121,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_berat"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:inputType="number"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -139,7 +142,8 @@
                     android:id="@+id/et_posisi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:focusableInTouchMode="false" />
+                    android:focusableInTouchMode="false"
+                    android:inputType="text"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -153,7 +157,6 @@
                     android:id="@+id/btn_delete"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:layout_marginTop="@dimen/spacing_xlarge"
                     android:background="@drawable/btn_rounded"
                     android:fontFamily="@font/montserrat_regular"
@@ -166,7 +169,6 @@
                     android:id="@+id/btn_simpan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:layout_marginTop="@dimen/spacing_xlarge"
                     android:background="@drawable/btn_rounded"
                     android:fontFamily="@font/montserrat_regular"

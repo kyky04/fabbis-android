@@ -10,10 +10,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import de.hdodenhof.circleimageview.CircleImageView;
 import id.metamorph.fabis.R;
+import id.metamorph.fabis.data.Contans;
 import id.metamorph.fabis.models.pemain.DataItemPemain;
 
 
@@ -62,8 +66,10 @@ public class PemainAdapter extends RecyclerView.Adapter<PemainAdapter.MyHolder> 
         DataItemPemain item = listItem.get(position);
         holder.tvNamaPemain.setText(item.getNama());
         holder.tvNim.setText(item.getNim());
-        holder.tvBerat.setText("BB : "+item.getBerat()+", TB : "+item.getTinggi());
+        holder.tvBerat.setText("BB : " + item.getBerat() + ", TB : " + item.getTinggi());
         holder.tvPosisi.setText(item.getPosisi());
+
+        Glide.with(context).load(Contans.STORAGE + item.getFoto()).into(holder.imgFoto);
 
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {

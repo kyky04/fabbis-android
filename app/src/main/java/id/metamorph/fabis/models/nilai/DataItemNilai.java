@@ -3,8 +3,10 @@ package id.metamorph.fabis.models.nilai;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 
-public class DataItemNilai {
+
+public class DataItemNilai implements Serializable {
 
 	@SerializedName("defence")
 	private String defence;

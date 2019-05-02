@@ -2,6 +2,7 @@ package id.metamorph.fabis.fragments;
 
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,18 +13,27 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.androidnetworking.AndroidNetworking;
+import com.androidnetworking.common.ANRequest;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.OkHttpResponseListener;
+import com.bumptech.glide.Glide;
+import com.esafirm.imagepicker.features.ImagePicker;
+import com.esafirm.imagepicker.features.ReturnMode;
+import com.esafirm.imagepicker.model.Image;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 import androidx.fragment.app.DialogFragment;
+
+import java.io.File;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
 import de.hdodenhof.circleimageview.CircleImageView;
 import id.metamorph.fabis.R;
+import id.metamorph.fabis.data.Contans;
 import id.metamorph.fabis.models.pemain.DataItemPemain;
 import id.metamorph.fabis.utils.DialogUtils;
 import okhttp3.Response;
@@ -49,16 +59,18 @@ public class FragmentInputPemain extends DialogFragment {
     TextInputEditText etBerat;
     @BindView(R.id.btn_simpan)
     Button btnSimpan;
-
-    DataItemPemain pemain;
+    @BindView(R.id.btn_delete)
+    Button btnDelete;
     @BindView(R.id.et_posisi)
     TextInputEditText etPosisi;
     @BindView(R.id.text_posisi)
     TextInputLayout textPosisi;
 
+    DataItemPemain pemain;
     private OnFragmentInteractionListener mListener;
     private ProgressDialog progressDialog;
     private String posisi = "";
+    private Image image;
 
     public static FragmentInputPemain newInstance(DataItemPemain pemain) {
 
@@ -84,6 +96,9 @@ public class FragmentInputPemain extends DialogFragment {
             tvNama.setText("Fabbis Selection Team (" + pemain.getPosisi() + ")");
             etPosisi.setText(pemain.getPosisi());
             posisi = pemain.getPosisi();
+            Glide.with(getActivity()).load(Contans.STORAGE + pemain.getFoto()).into(imgFoto);
+        } else {
+            btnDelete.setVisibility(View.GONE);
         }
 
         return view;
@@ -99,12 +114,17 @@ public class FragmentInputPemain extends DialogFragment {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.img_foto:
+                addImage();
                 break;
             case R.id.btn_simpan:
                 if (getArguments() != null) {
                     edit();
                 } else {
-                    post();
+                    if (image != null) {
+                        post();
+                    } else {
+                        Toast.makeText(getActivity(), "Harap isi foto terlebih dahulu", Toast.LENGTH_SHORT).show();
+                    }
                 }
                 break;
             case R.id.btn_delete:
@@ -139,16 +159,36 @@ public class FragmentInputPemain extends DialogFragment {
         }
     }
 
+    private void addImage() {
+        ImagePicker.create(this)
+                .returnMode(ReturnMode.ALL)
+                .single()
+                .start();
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (ImagePicker.shouldHandle(requestCode, resultCode, data)) {
+            image = ImagePicker.getFirstImageOrNull(data);
+
+            Glide.with(getActivity()).load(image.getPath()).into(imgFoto);
+
+        }
+    }
+
     public void post() {
         showProgress();
-        AndroidNetworking.post(PEMAIN)
-                .addBodyParameter("nama", etNamaLengkap.getText().toString())
-                .addBodyParameter("nim", etNim.getText().toString())
-                .addBodyParameter("tinggi", etTinggi.getText().toString())
-                .addBodyParameter("berat", etBerat.getText().toString())
-                .addBodyParameter("posisi", posisi)
-                .addBodyParameter("foto", "-")
-                .addBodyParameter("gender", String.valueOf(0))
+        ANRequest.MultiPartBuilder builder = new ANRequest.MultiPartBuilder(PEMAIN);
+        builder
+                .addMultipartParameter("nama", etNamaLengkap.getText().toString())
+                .addMultipartParameter("nim", etNim.getText().toString())
+                .addMultipartParameter("tinggi", etTinggi.getText().toString())
+                .addMultipartParameter("berat", etBerat.getText().toString())
+                .addMultipartParameter("posisi", posisi)
+                .addMultipartFile("foto", new File(image.getPath()))
+                .addMultipartParameter("gender", String.valueOf(0))
                 .build()
                 .getAsOkHttpResponse(new OkHttpResponseListener() {
                     @Override
@@ -173,16 +213,16 @@ public class FragmentInputPemain extends DialogFragment {
 
     public void edit() {
         showProgress();
-        AndroidNetworking.post(PEMAIN + "/{id_pemain}")
-                .addPathParameter("id_pemain", String.valueOf(pemain.getId()))
-                .addBodyParameter("nama", etNamaLengkap.getText().toString())
-                .addBodyParameter("nim", etNim.getText().toString())
-                .addBodyParameter("tinggi", etTinggi.getText().toString())
-                .addBodyParameter("berat", etBerat.getText().toString())
-                .addBodyParameter("posisi", posisi)
-                .addBodyParameter("foto", "-")
-                .addBodyParameter("gender", String.valueOf(0))
-                .addBodyParameter("_method","PUT")
+        ANRequest.MultiPartBuilder builder = new ANRequest.MultiPartBuilder(PEMAIN + "/{id_pemain}");
+        builder.addPathParameter("id_pemain", String.valueOf(pemain.getId()))
+                .addMultipartParameter("nama", etNamaLengkap.getText().toString())
+                .addMultipartParameter("nim", etNim.getText().toString())
+                .addMultipartParameter("tinggi", etTinggi.getText().toString())
+                .addMultipartParameter("berat", etBerat.getText().toString())
+                .addMultipartParameter("posisi", posisi)
+                .addMultipartFile("foto", new File(image.getPath()))
+                .addMultipartParameter("gender", String.valueOf(0))
+                .addMultipartParameter("_method", "PUT")
                 .build()
                 .getAsOkHttpResponse(new OkHttpResponseListener() {
                     @Override

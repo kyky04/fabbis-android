@@ -3,8 +3,10 @@ package id.metamorph.fabis.models.nilai;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 
-public class Pemain{
+
+public class Pemain implements Serializable {
 
 	@SerializedName("gender")
 	private String gender;
