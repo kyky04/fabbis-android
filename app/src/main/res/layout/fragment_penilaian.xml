@@ -111,7 +111,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="Change of pace" />
+                        android:text="1. Change of pace" />
 
                     <EditText
                         android:id="@+id/et_dribble1"
@@ -137,7 +137,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="Low or Control" />
+                        android:text="2. Low or Control" />
 
                     <EditText
                         android:id="@+id/et_dribble2"
@@ -189,7 +189,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="Cross Over" />
+                        android:text="3. Cross Over" />
 
                     <EditText
                         android:id="@+id/et_dribble4"
@@ -215,7 +215,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="Behind the back" />
+                        android:text="4. Behind the back" />
 
                     <EditText
                         android:id="@+id/et_dribble5"
@@ -241,7 +241,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="Between the legs" />
+                        android:text="5. Between the legs" />
 
                     <EditText
                         android:id="@+id/et_dribble6"
@@ -267,7 +267,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="Reverse" />
+                        android:text="6. Reverse" />
 
                     <EditText
                         android:id="@+id/et_dribble7"
@@ -293,7 +293,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="Pivot" />
+                        android:text="7. Pivot" />
 
                     <EditText
                         android:id="@+id/et_dribble8"
@@ -335,7 +335,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="Set shoot" />
+                        android:text="8. Set shoot" />
 
                     <EditText
                         android:id="@+id/et_shoot1"
@@ -361,7 +361,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="Lay Up" />
+                        android:text="9. Lay Up" />
 
                     <EditText
                         android:id="@+id/et_shoot2"
@@ -387,7 +387,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="Jump Shoot" />
+                        android:text="10. Jump Shoot" />
 
                     <EditText
                         android:id="@+id/et_shoot3"
@@ -413,7 +413,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="Hook shoot" />
+                        android:text="11. Hook shoot" />
 
                     <EditText
                         android:id="@+id/et_shoot4"
@@ -455,7 +455,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="Chest pass" />
+                        android:text="12. Chest pass" />
 
                     <EditText
                         android:id="@+id/et_pass1"
@@ -481,7 +481,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="Bounce pass" />
+                        android:text="13. Bounce pass" />
 
                     <EditText
                         android:id="@+id/et_pass2"
@@ -507,7 +507,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="Overhead pass" />
+                        android:text="14. Overhead pass" />
 
                     <EditText
                         android:id="@+id/et_pass3"
@@ -533,7 +533,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="Baseball pass" />
+                        android:text="15. Baseball pass" />
 
                     <EditText
                         android:id="@+id/et_pass4"
@@ -559,7 +559,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_bold"
-                        android:text="Defence" />
+                        android:text="16. Defence" />
 
                     <EditText
                         android:id="@+id/et_defence"
@@ -585,7 +585,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_bold"
-                        android:text="Serangan" />
+                        android:text="17. Serangan" />
 
                     <EditText
                         android:id="@+id/et_serangan"
@@ -611,7 +611,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_bold"
-                        android:text="Speed" />
+                        android:text="18. Speed" />
 
                     <EditText
                         android:id="@+id/et_speed"

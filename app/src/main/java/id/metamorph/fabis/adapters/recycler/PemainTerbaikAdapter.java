@@ -69,11 +69,11 @@ public class PemainTerbaikAdapter extends RecyclerView.Adapter<PemainTerbaikAdap
         holder.tvPosisi.setText(item.getPosisi());
 
 
-        if (item.getStatus().equals("0")) {
-            holder.tvStatus.setText("Belum di nilai");
-        } else {
-            holder.tvStatus.setText("Selesai");
-        }
+//        if (item.getStatus().equals("0")) {
+//            holder.tvStatus.setText("Belum di nilai");
+//        } else {
+//            holder.tvStatus.setText("Selesai");
+//        }
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
