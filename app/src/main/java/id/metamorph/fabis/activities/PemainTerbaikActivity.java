@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -106,6 +107,27 @@ public class PemainTerbaikActivity extends AppCompatActivity {
                         closeProgress();
                         if (response instanceof PemainResponse) {
                             if (((PemainResponse) response).isStatus()) {
+                                if (((PemainResponse) response).getData() != null) {
+                                    for (int i = 0; i < ((PemainResponse) response).getData().size(); i++) {
+                                        if (((PemainResponse) response).getData().get(i).getNilai() != null) {
+                                            int dribble1 = Integer.parseInt(((PemainResponse) response).getData().get(i).getNilai().getDribble1());
+                                            int dribble2 = Integer.parseInt(((PemainResponse) response).getData().get(i).getNilai().getDribble2());
+                                            int dribble3 = Integer.parseInt(((PemainResponse) response).getData().get(i).getNilai().getDribble3());
+                                            int dribble4 = Integer.parseInt(((PemainResponse) response).getData().get(i).getNilai().getDribble4());
+                                            int dribble5 = Integer.parseInt(((PemainResponse) response).getData().get(i).getNilai().getDribble5());
+                                            int dribble6 = Integer.parseInt(((PemainResponse) response).getData().get(i).getNilai().getDribble5());
+
+                                            int total = dribble1 + dribble2 + dribble3 + dribble3 + dribble4 + dribble5;
+
+                                            if (total > 50) {
+                                                ((PemainResponse) response).getData().get(i).setMasuk(true);
+                                            } else {
+                                                ((PemainResponse) response).getData().get(i).setMasuk(false);
+                                            }
+                                        }
+                                    }
+
+                                }
                                 adapter.swap(((PemainResponse) response).getData());
                             } else {
                                 Toast.makeText(PemainTerbaikActivity.this, "Kesalahan Teknis !", Toast.LENGTH_SHORT).show();

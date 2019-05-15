@@ -2,6 +2,7 @@ package id.metamorph.fabis.activities;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import com.androidnetworking.AndroidNetworking;
@@ -19,6 +20,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import id.metamorph.fabis.R;
 import id.metamorph.fabis.adapters.recycler.PemainAdapter;
+import id.metamorph.fabis.data.Session;
 import id.metamorph.fabis.fragments.FragmentInputPemain;
 import id.metamorph.fabis.models.pemain.DataItemPemain;
 import id.metamorph.fabis.models.pemain.PemainResponse;
@@ -42,6 +44,8 @@ public class PemainActivity extends AppCompatActivity {
     int gender = 0;
     boolean seleksi = false;
 
+    Session session;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +55,7 @@ public class PemainActivity extends AppCompatActivity {
     }
 
     void initView() {
+        session = new Session(this);
         posisi = getIntent().getStringExtra("posisi");
         gender = getIntent().getIntExtra("gender", 0);
         seleksi = getIntent().getBooleanExtra("seleksi", false);

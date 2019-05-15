@@ -10,10 +10,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import de.hdodenhof.circleimageview.CircleImageView;
 import id.metamorph.fabis.R;
+import id.metamorph.fabis.data.Contans;
 import id.metamorph.fabis.models.pemain.DataItemPemain;
 
 
@@ -64,7 +68,10 @@ public class PemainPenialaianAdapter extends RecyclerView.Adapter<PemainPenialai
         holder.tvNim.setText(item.getNim());
         holder.tvBerat.setText("BB : " + item.getBerat() + ", TB : " + item.getTinggi());
         holder.tvPosisi.setText(item.getPosisi());
+        int indeks = position + 1;
+        holder.tvIndeks.setText(indeks + "");
 
+        Glide.with(context).load(Contans.STORAGE + item.getFoto()).into(holder.imgFoto);
         if (item.getStatus().equals("0")) {
             holder.tvStatus.setText("Belum di nilai");
         } else {
@@ -98,6 +105,8 @@ public class PemainPenialaianAdapter extends RecyclerView.Adapter<PemainPenialai
         TextView tvPosisi;
         @BindView(R.id.tv_status)
         TextView tvStatus;
+        @BindView(R.id.tv_indeks)
+        TextView tvIndeks;
 
 
         public MyHolder(View itemView) {

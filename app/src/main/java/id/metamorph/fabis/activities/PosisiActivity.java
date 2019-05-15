@@ -6,10 +6,14 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import id.metamorph.fabis.R;
+import id.metamorph.fabis.data.Session;
 import id.metamorph.fabis.fragments.FragmentInputPemain;
 import id.metamorph.fabis.utils.ActivityUtils;
 
@@ -30,6 +34,9 @@ public class PosisiActivity extends AppCompatActivity {
     LinearLayout btnSemua;
 
     int gender = 0;
+    @BindView(R.id.fab_add)
+    FloatingActionButton fabAdd;
+    private Session session;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,15 +47,18 @@ public class PosisiActivity extends AppCompatActivity {
     }
 
     void initView() {
-        gender = getIntent().getIntExtra("gender",0);
-
+        gender = getIntent().getIntExtra("gender", 0);
+        session = new Session(this);
+        if (session.getUser().getData().getStatus().equals("1")) {
+            fabAdd.setVisibility(View.GONE);
+        }
     }
 
 
     @OnClick({R.id.btn_point, R.id.btn_shooting, R.id.btn_power, R.id.btn_strong, R.id.btn_center, R.id.btn_semua, R.id.fab_add})
     public void onViewClicked(View view) {
         Intent intent = new Intent(PosisiActivity.this, PemainActivity.class);
-        intent.putExtra("gender",gender);
+        intent.putExtra("gender", gender);
         switch (view.getId()) {
             case R.id.btn_point:
                 intent.putExtra("posisi", "PG");

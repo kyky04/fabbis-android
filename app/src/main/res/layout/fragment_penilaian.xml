@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_large"
                 android:fontFamily="@font/montserrat_bold"
-                android:text="FABBIS UIN SGD"
+                android:text="PENILAIAN PEMAIN"
                 android:textSize="34dp" />
 
             <TextView
@@ -163,7 +163,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="High Speed" />
+                        android:text="3. High Speed" />
 
                     <EditText
                         android:id="@+id/et_dribble3"
@@ -189,7 +189,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="3. Cross Over" />
+                        android:text="4. Cross Over" />
 
                     <EditText
                         android:id="@+id/et_dribble4"
@@ -215,7 +215,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="4. Behind the back" />
+                        android:text="5. Behind the back" />
 
                     <EditText
                         android:id="@+id/et_dribble5"
@@ -241,7 +241,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="5. Between the legs" />
+                        android:text="6. Between the legs" />
 
                     <EditText
                         android:id="@+id/et_dribble6"
@@ -267,7 +267,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="6. Reverse" />
+                        android:text="7. Reverse" />
 
                     <EditText
                         android:id="@+id/et_dribble7"
@@ -293,7 +293,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="7. Pivot" />
+                        android:text="8. Pivot" />
 
                     <EditText
                         android:id="@+id/et_dribble8"
@@ -335,7 +335,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="8. Set shoot" />
+                        android:text="9. Set shoot" />
 
                     <EditText
                         android:id="@+id/et_shoot1"
@@ -361,7 +361,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="9. Lay Up" />
+                        android:text="10. Lay Up" />
 
                     <EditText
                         android:id="@+id/et_shoot2"
@@ -387,7 +387,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="10. Jump Shoot" />
+                        android:text="11. Jump Shoot" />
 
                     <EditText
                         android:id="@+id/et_shoot3"
@@ -413,7 +413,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="11. Hook shoot" />
+                        android:text="12. Hook shoot" />
 
                     <EditText
                         android:id="@+id/et_shoot4"
@@ -455,7 +455,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="12. Chest pass" />
+                        android:text="13. Chest pass" />
 
                     <EditText
                         android:id="@+id/et_pass1"
@@ -481,7 +481,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="13. Bounce pass" />
+                        android:text="14. Bounce pass" />
 
                     <EditText
                         android:id="@+id/et_pass2"
@@ -507,7 +507,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="14. Overhead pass" />
+                        android:text="15. Overhead pass" />
 
                     <EditText
                         android:id="@+id/et_pass3"
@@ -533,7 +533,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_regular"
-                        android:text="15. Baseball pass" />
+                        android:text="16. Baseball pass" />
 
                     <EditText
                         android:id="@+id/et_pass4"
@@ -559,7 +559,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_bold"
-                        android:text="16. Defence" />
+                        android:text="17. Defence" />
 
                     <EditText
                         android:id="@+id/et_defence"
@@ -585,7 +585,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_bold"
-                        android:text="17. Serangan" />
+                        android:text="18. Serangan" />
 
                     <EditText
                         android:id="@+id/et_serangan"
@@ -611,10 +611,192 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_bold"
-                        android:text="18. Speed" />
+                        android:text="19. Speed" />
 
                     <EditText
                         android:id="@+id/et_speed"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/et_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="number"
+                        android:padding="@dimen/spacing_large"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="20. Body Balance (keseimbangan)" />
+
+                    <EditText
+                        android:id="@+id/et_body_balance"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/et_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="number"
+                        android:padding="@dimen/spacing_large"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="21. Ball Handling (control bola)" />
+
+                    <EditText
+                        android:id="@+id/et_ball_handling"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/et_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="number"
+                        android:padding="@dimen/spacing_large"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="22. Rebound (menanngkap bola)" />
+
+                    <EditText
+                        android:id="@+id/et_rebound"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/et_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="number"
+                        android:padding="@dimen/spacing_large"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="23. Response (kecepatan berfikir)" />
+
+                    <EditText
+                        android:id="@+id/et_response"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/et_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="number"
+                        android:padding="@dimen/spacing_large"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="23. Jump (lompatan)" />
+
+                    <EditText
+                        android:id="@+id/et_jump"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/et_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="number"
+                        android:padding="@dimen/spacing_large"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="23. Fisik Pemain" />
+
+                    <EditText
+                        android:id="@+id/et_fisik"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/et_rounded"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:inputType="number"
+                        android:padding="@dimen/spacing_large"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="24. Kehadiran Latihan" />
+
+                    <EditText
+                        android:id="@+id/et_kehadiran_latihan"
                         android:layout_width="70dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/spacing_medium"

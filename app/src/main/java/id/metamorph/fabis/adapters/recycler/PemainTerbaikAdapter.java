@@ -12,10 +12,14 @@ import java.util.List;
 
 import androidx.appcompat.widget.AppCompatSpinner;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import de.hdodenhof.circleimageview.CircleImageView;
 import id.metamorph.fabis.R;
+import id.metamorph.fabis.data.Contans;
 import id.metamorph.fabis.models.pemain.DataItemPemain;
 
 
@@ -67,13 +71,16 @@ public class PemainTerbaikAdapter extends RecyclerView.Adapter<PemainTerbaikAdap
         holder.tvNim.setText(item.getNim());
         holder.tvBerat.setText("BB : " + item.getBerat() + ", TB : " + item.getTinggi());
         holder.tvPosisi.setText(item.getPosisi());
+        int indeks = position + 1;
+        holder.tvIndeks.setText(indeks + "");
 
+        Glide.with(context).load(Contans.STORAGE + item.getFoto()).into(holder.imgFoto);
 
-//        if (item.getStatus().equals("0")) {
-//            holder.tvStatus.setText("Belum di nilai");
-//        } else {
-//            holder.tvStatus.setText("Selesai");
-//        }
+        if (item.isMasuk()) {
+            holder.tvStatus.setText("Layak");
+        } else {
+            holder.tvStatus.setText("Tidak Layak");
+        }
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,6 +127,8 @@ public class PemainTerbaikAdapter extends RecyclerView.Adapter<PemainTerbaikAdap
         TextView tvStatus;
         @BindView(R.id.sp_terbaik)
         AppCompatSpinner spTerbaik;
+        @BindView(R.id.tv_indeks)
+        TextView tvIndeks;
 
 
         public MyHolder(View itemView) {

@@ -29,7 +29,7 @@ public class MyApp extends Application {
 
 
 //        AndroidNetworking.initialize(getApplicationContext(),client);
-        AndroidNetworking.enableLogging(com.androidnetworking.interceptors.HttpLoggingInterceptor.Level.BODY);
+        AndroidNetworking.enableLogging();
 
 
     }

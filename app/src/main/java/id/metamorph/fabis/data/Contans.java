@@ -5,7 +5,7 @@ public class Contans {
 //    public static String WEB_URL = "http://192.168.1.4/fabbis/public";
     public static String WEB_URL = "http://fabbis.mitra-travel.net/public";
     public static String WEB_URL_API = WEB_URL + "/api/";
-    public static String STORAGE = WEB_URL + "storage/";
+    public static String STORAGE = WEB_URL + "/storage/";
 
     //auth
     public static String LOGIN = WEB_URL_API + "login";

@@ -33,7 +33,7 @@ public class DataItemPemain implements Serializable {
     private String berat;
 
     @SerializedName("updated_by")
-    private Object updatedBy;
+    private int updatedBy;
 
     @SerializedName("id")
     private int id;
@@ -49,6 +49,16 @@ public class DataItemPemain implements Serializable {
 
     @SerializedName("terpilih")
     private String terpilih;
+
+    private boolean masuk;
+
+    public boolean isMasuk() {
+        return masuk;
+    }
+
+    public void setMasuk(boolean masuk) {
+        this.masuk = masuk;
+    }
 
     public String getTerpilih() {
         return terpilih;
@@ -132,11 +142,11 @@ public class DataItemPemain implements Serializable {
         return berat;
     }
 
-    public void setUpdatedBy(Object updatedBy) {
+    public void setUpdatedBy(int updatedBy) {
         this.updatedBy = updatedBy;
     }
 
-    public Object getUpdatedBy() {
+    public int getUpdatedBy() {
         return updatedBy;
     }
 

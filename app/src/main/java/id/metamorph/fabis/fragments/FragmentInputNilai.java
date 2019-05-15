@@ -11,15 +11,17 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.fragment.app.DialogFragment;
+
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.OkHttpResponseListener;
 import com.androidnetworking.interfaces.ParsedRequestListener;
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import androidx.fragment.app.DialogFragment;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -27,6 +29,7 @@ import butterknife.Unbinder;
 import de.hdodenhof.circleimageview.CircleImageView;
 import id.metamorph.fabis.R;
 import id.metamorph.fabis.adapters.recycler.KriteriaAdapter;
+import id.metamorph.fabis.data.Contans;
 import id.metamorph.fabis.models.kriteria.DetailItem;
 import id.metamorph.fabis.models.kriteria.KriteriaResponse;
 import id.metamorph.fabis.models.pemain.DataItemPemain;
@@ -92,6 +95,20 @@ public class FragmentInputNilai extends DialogFragment {
     Button btnSimpan;
     @BindView(R.id.lay_button)
     LinearLayout layButton;
+    @BindView(R.id.et_body_balance)
+    EditText etBodyBalance;
+    @BindView(R.id.et_ball_handling)
+    EditText etBallHandling;
+    @BindView(R.id.et_rebound)
+    EditText etRebound;
+    @BindView(R.id.et_response)
+    EditText etResponse;
+    @BindView(R.id.et_jump)
+    EditText etJump;
+    @BindView(R.id.et_fisik)
+    EditText etFisik;
+    @BindView(R.id.et_kehadiran_latihan)
+    EditText etKehadiranLatihan;
 
 
     private OnFragmentInteractionListener mListener;
@@ -139,6 +156,15 @@ public class FragmentInputNilai extends DialogFragment {
                 etDefence.setText(pemain.getNilai().getDefence());
                 etSerangan.setText(pemain.getNilai().getSerangan());
                 etSpeed.setText(pemain.getNilai().getSpeed());
+                etBodyBalance.setText("50");
+                etBallHandling.setText("50");
+                etRebound.setText("50");
+                etResponse.setText("50");
+                etJump.setText("50");
+                etFisik.setText("50");
+                etKehadiranLatihan.setText("50");
+
+                Glide.with(getActivity()).load(Contans.STORAGE + pemain.getFoto()).into(imgFoto);
 
                 layButton.setVisibility(View.GONE);
             }
@@ -162,6 +188,13 @@ public class FragmentInputNilai extends DialogFragment {
             etDefence.setText("50");
             etSerangan.setText("50");
             etSpeed.setText("50");
+            etBodyBalance.setText("50");
+            etBallHandling.setText("50");
+            etRebound.setText("50");
+            etResponse.setText("50");
+            etJump.setText("50");
+            etFisik.setText("50");
+            etKehadiranLatihan.setText("50");
         }
 
         adapter = new KriteriaAdapter(getActivity());

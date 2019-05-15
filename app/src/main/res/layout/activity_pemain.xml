@@ -28,7 +28,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/spacing_large"
                     android:fontFamily="@font/montserrat_bold"
-                    android:text="FABBIS UIN SGD"
+                    android:text="PEMAIN"
                     android:textSize="34dp" />
 
                 <TextView
