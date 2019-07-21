@@ -31,6 +31,7 @@
         <activity android:name="id.metamorph.fabis.activities.MenuDetailActivity"></activity>
         <activity android:name="id.metamorph.fabis.activities.PemainPenialaianActivity"></activity>
         <activity android:name="id.metamorph.fabis.activities.PemainTerbaikActivity"></activity>
+        <activity android:name="id.metamorph.fabis.activities.PosisiTerbaikActivity"></activity>
     </application>
 
 </manifest>

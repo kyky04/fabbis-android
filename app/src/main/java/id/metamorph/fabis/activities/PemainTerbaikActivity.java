@@ -18,11 +18,16 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import id.metamorph.fabis.R;
 import id.metamorph.fabis.adapters.recycler.PemainTerbaikAdapter;
+import id.metamorph.fabis.algorithm.Topsis;
 import id.metamorph.fabis.fragments.FragmentInputNilai;
 import id.metamorph.fabis.models.pemain.DataItemPemain;
 import id.metamorph.fabis.models.pemain.PemainResponse;
@@ -107,28 +112,20 @@ public class PemainTerbaikActivity extends AppCompatActivity {
                         closeProgress();
                         if (response instanceof PemainResponse) {
                             if (((PemainResponse) response).isStatus()) {
-                                if (((PemainResponse) response).getData() != null) {
-                                    for (int i = 0; i < ((PemainResponse) response).getData().size(); i++) {
-                                        if (((PemainResponse) response).getData().get(i).getNilai() != null) {
-                                            int dribble1 = Integer.parseInt(((PemainResponse) response).getData().get(i).getNilai().getDribble1());
-                                            int dribble2 = Integer.parseInt(((PemainResponse) response).getData().get(i).getNilai().getDribble2());
-                                            int dribble3 = Integer.parseInt(((PemainResponse) response).getData().get(i).getNilai().getDribble3());
-                                            int dribble4 = Integer.parseInt(((PemainResponse) response).getData().get(i).getNilai().getDribble4());
-                                            int dribble5 = Integer.parseInt(((PemainResponse) response).getData().get(i).getNilai().getDribble5());
-                                            int dribble6 = Integer.parseInt(((PemainResponse) response).getData().get(i).getNilai().getDribble5());
+                                List<DataItemPemain> data = ((PemainResponse) response).getData();
+                                proses(data);
 
-                                            int total = dribble1 + dribble2 + dribble3 + dribble3 + dribble4 + dribble5;
-
-                                            if (total > 50) {
-                                                ((PemainResponse) response).getData().get(i).setMasuk(true);
-                                            } else {
-                                                ((PemainResponse) response).getData().get(i).setMasuk(false);
-                                            }
-                                        }
+                                //proses topsis
+                                for (int i = 0; i < data.size(); i++) {
+                                    try {
+                                        Topsis topsis = new Topsis(data.size(), data.get(i).getId());
+                                        topsis.TopsisMethod();
+                                    } catch (NullPointerException e) {
+                                        e.printStackTrace();
                                     }
-
                                 }
-                                adapter.swap(((PemainResponse) response).getData());
+
+
                             } else {
                                 Toast.makeText(PemainTerbaikActivity.this, "Kesalahan Teknis !", Toast.LENGTH_SHORT).show();
                             }
@@ -142,6 +139,34 @@ public class PemainTerbaikActivity extends AppCompatActivity {
                         closeProgress();
                     }
                 });
+    }
+
+    private void proses(List<DataItemPemain> data) {
+        if (data != null) {
+            for (int i = 0; i < data.size(); i++) {
+                if (data.get(i).getNilai() != null) {
+                    int dribble1 = Integer.parseInt(data.get(i).getNilai().getDribble1());
+                    int dribble2 = Integer.parseInt(data.get(i).getNilai().getDribble2());
+                    int dribble3 = Integer.parseInt(data.get(i).getNilai().getDribble3());
+                    int dribble4 = Integer.parseInt(data.get(i).getNilai().getDribble4());
+                    int dribble5 = Integer.parseInt(data.get(i).getNilai().getDribble5());
+                    int dribble6 = Integer.parseInt(data.get(i).getNilai().getDribble6());
+
+                    int total = dribble1 + dribble2 + dribble3 + dribble3 + dribble4 + dribble5 + dribble6;
+
+                    if (total > 50) {
+                        data.get(i).setMasuk(true);
+                    } else {
+                        data.get(i).setMasuk(false);
+                    }
+                    data.get(i).setTotal(total);
+
+                    Collections.sort(data, (o1, o2) -> Integer.valueOf(o2.getTotal()).compareTo(o1.getTotal()));
+                }
+            }
+
+        }
+        adapter.swap(data);
     }
 
     public void showProgress() {

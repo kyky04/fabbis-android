@@ -7,13 +7,13 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import androidx.appcompat.widget.AppCompatSpinner;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -31,7 +31,6 @@ public class PemainTerbaikAdapter extends RecyclerView.Adapter<PemainTerbaikAdap
     Context context;
     List<DataItemPemain> listItem;
     OnItemClickListener mOnItemClickListener;
-
 
 
     public void resetListData() {
@@ -81,6 +80,7 @@ public class PemainTerbaikAdapter extends RecyclerView.Adapter<PemainTerbaikAdap
         } else {
             holder.tvStatus.setText("Tidak Layak");
         }
+        holder.tvNilai.setText(item.getTotal() + " ");
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,9 +92,9 @@ public class PemainTerbaikAdapter extends RecyclerView.Adapter<PemainTerbaikAdap
         holder.spTerbaik.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(position == 0){
+                if (position == 0) {
                     item.setSeleksi(true);
-                }else {
+                } else {
                     item.setSeleksi(false);
                 }
             }
@@ -129,6 +129,8 @@ public class PemainTerbaikAdapter extends RecyclerView.Adapter<PemainTerbaikAdap
         AppCompatSpinner spTerbaik;
         @BindView(R.id.tv_indeks)
         TextView tvIndeks;
+        @BindView(R.id.tv_nilai)
+        TextView tvNilai;
 
 
         public MyHolder(View itemView) {
@@ -168,7 +170,7 @@ public class PemainTerbaikAdapter extends RecyclerView.Adapter<PemainTerbaikAdap
         return listItem.get(pos);
     }
 
-    public List<DataItemPemain> getListItem(){
+    public List<DataItemPemain> getListItem() {
         return listItem;
     }
 }

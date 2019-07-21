@@ -50,6 +50,16 @@ public class DataItemPemain implements Serializable {
     @SerializedName("terpilih")
     private String terpilih;
 
+    private int total;
+
+    public int getTotal() {
+        return total;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
+    }
+
     private boolean masuk;
 
     public boolean isMasuk() {

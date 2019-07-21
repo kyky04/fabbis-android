@@ -34,6 +34,7 @@ import butterknife.Unbinder;
 import de.hdodenhof.circleimageview.CircleImageView;
 import id.metamorph.fabis.R;
 import id.metamorph.fabis.data.Contans;
+import id.metamorph.fabis.data.Session;
 import id.metamorph.fabis.models.pemain.DataItemPemain;
 import id.metamorph.fabis.utils.DialogUtils;
 import okhttp3.Response;
@@ -71,6 +72,7 @@ public class FragmentInputPemain extends DialogFragment {
     private ProgressDialog progressDialog;
     private String posisi = "";
     private Image image;
+    private Session session;
 
     public static FragmentInputPemain newInstance(DataItemPemain pemain) {
 
@@ -97,6 +99,12 @@ public class FragmentInputPemain extends DialogFragment {
             etPosisi.setText(pemain.getPosisi());
             posisi = pemain.getPosisi();
             Glide.with(getActivity()).load(Contans.STORAGE + pemain.getFoto()).into(imgFoto);
+
+            session = new Session(getActivity());
+            if (session.getUser().getData().getStatus().equals("1")) {
+                btnDelete.setVisibility(View.GONE);
+                btnSimpan.setVisibility(View.GONE);
+            }
         } else {
             btnDelete.setVisibility(View.GONE);
         }
@@ -220,29 +228,30 @@ public class FragmentInputPemain extends DialogFragment {
                 .addMultipartParameter("tinggi", etTinggi.getText().toString())
                 .addMultipartParameter("berat", etBerat.getText().toString())
                 .addMultipartParameter("posisi", posisi)
-                .addMultipartFile("foto", new File(image.getPath()))
                 .addMultipartParameter("gender", String.valueOf(0))
-                .addMultipartParameter("_method", "PUT")
-                .build()
-                .getAsOkHttpResponse(new OkHttpResponseListener() {
-                    @Override
-                    public void onResponse(Response response) {
-                        closeProgress();
-                        if (response.code() == 200) {
-                            mListener.onFragmentInteraction();
-                            Toast.makeText(getActivity(), "Success", Toast.LENGTH_SHORT).show();
-                            dismiss();
-                        } else {
-                            Toast.makeText(getActivity(), "Gagal", Toast.LENGTH_SHORT).show();
-                        }
-                    }
+                .addMultipartParameter("_method", "PUT");
+        if (image != null) {
+            builder.addMultipartFile("foto", new File(image.getPath()));
+        }
+        builder.build().getAsOkHttpResponse(new OkHttpResponseListener() {
+            @Override
+            public void onResponse(Response response) {
+                closeProgress();
+                if (response.code() == 200) {
+                    mListener.onFragmentInteraction();
+                    Toast.makeText(getActivity(), "Success", Toast.LENGTH_SHORT).show();
+                    dismiss();
+                } else {
+                    Toast.makeText(getActivity(), "Gagal", Toast.LENGTH_SHORT).show();
+                }
+            }
 
-                    @Override
-                    public void onError(ANError anError) {
-                        closeProgress();
+            @Override
+            public void onError(ANError anError) {
+                closeProgress();
 
-                    }
-                });
+            }
+        });
     }
 
     public void delete() {

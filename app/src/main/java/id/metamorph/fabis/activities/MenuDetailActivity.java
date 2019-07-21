@@ -69,7 +69,7 @@ public class MenuDetailActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_terbaik:
-                intent = new Intent(MenuDetailActivity.this, PemainTerbaikActivity.class);
+                intent = new Intent(MenuDetailActivity.this, PosisiTerbaikActivity.class);
                 intent.putExtra("gender", jk);
                 startActivity(intent);
                 break;

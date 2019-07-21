@@ -74,6 +74,83 @@ public class DataItemNilai implements Serializable {
 	@SerializedName("serangan")
 	private String serangan;
 
+	@SerializedName("body_balance")
+	private String body_balance;
+
+	@SerializedName("ball_handling")
+	private String ball_handling;
+
+	@SerializedName("rebound")
+	private String rebound;
+
+	@SerializedName("response")
+	private String response;
+
+	@SerializedName("jump")
+	private String jump;
+
+	@SerializedName("fisik")
+	private String fisik;
+
+	@SerializedName("kehadiran")
+	private String kehadiran;
+
+	public String getBody_balance() {
+		return body_balance;
+	}
+
+	public void setBody_balance(String body_balance) {
+		this.body_balance = body_balance;
+	}
+
+	public String getBall_handling() {
+		return ball_handling;
+	}
+
+	public void setBall_handling(String ball_handling) {
+		this.ball_handling = ball_handling;
+	}
+
+	public String getRebound() {
+		return rebound;
+	}
+
+	public void setRebound(String rebound) {
+		this.rebound = rebound;
+	}
+
+	public String getResponse() {
+		return response;
+	}
+
+	public void setResponse(String response) {
+		this.response = response;
+	}
+
+	public String getJump() {
+		return jump;
+	}
+
+	public void setJump(String jump) {
+		this.jump = jump;
+	}
+
+	public String getFisik() {
+		return fisik;
+	}
+
+	public void setFisik(String fisik) {
+		this.fisik = fisik;
+	}
+
+	public String getKehadiran() {
+		return kehadiran;
+	}
+
+	public void setKehadiran(String kehadiran) {
+		this.kehadiran = kehadiran;
+	}
+
 	@SerializedName("created_by")
 	private Object createdBy;
 

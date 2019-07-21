@@ -156,13 +156,13 @@ public class FragmentInputNilai extends DialogFragment {
                 etDefence.setText(pemain.getNilai().getDefence());
                 etSerangan.setText(pemain.getNilai().getSerangan());
                 etSpeed.setText(pemain.getNilai().getSpeed());
-                etBodyBalance.setText("50");
-                etBallHandling.setText("50");
-                etRebound.setText("50");
-                etResponse.setText("50");
-                etJump.setText("50");
-                etFisik.setText("50");
-                etKehadiranLatihan.setText("50");
+                etBodyBalance.setText(pemain.getNilai().getBody_balance());
+                etBallHandling.setText(pemain.getNilai().getBall_handling());
+                etRebound.setText(pemain.getNilai().getRebound());
+                etResponse.setText(pemain.getNilai().getResponse());
+                etJump.setText(pemain.getNilai().getJump());
+                etFisik.setText(pemain.getNilai().getFisik());
+                etKehadiranLatihan.setText(pemain.getNilai().getKehadiran());
 
                 Glide.with(getActivity()).load(Contans.STORAGE + pemain.getFoto()).into(imgFoto);
 

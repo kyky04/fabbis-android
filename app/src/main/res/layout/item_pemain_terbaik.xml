@@ -98,6 +98,18 @@
                 android:text="PG"
                 android:textColor="@color/white" />
 
+            <TextView
+                android:id="@+id/tv_nilai"
+                style="@style/FontStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|right"
+                android:layout_marginRight="@dimen/spacing_medium"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/spacing_medium"
+                android:text="100"
+                android:textColor="@color/white" />
+
 
         </LinearLayout>
 
