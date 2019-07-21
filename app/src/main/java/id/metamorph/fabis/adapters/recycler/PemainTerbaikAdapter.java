@@ -78,9 +78,9 @@ public class PemainTerbaikAdapter extends RecyclerView.Adapter<PemainTerbaikAdap
         if (item.isMasuk() && item.getTotal() > 400 && item.getTotal() < 600) {
             holder.tvStatus.setText("Layak");
         } else if (item.isMasuk() && item.getTotal() > 600) {
-            holder.tvStatus.setText("Layak");
+            holder.tvStatus.setText("Sangat Layak");
         } else {
-            holder.tvStatus.setText("Tidak Layak");
+            holder.tvStatus.setText("Kurang Layak");
         }
         holder.tvNilai.setText(item.getTotal() + " ");
 

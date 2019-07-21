@@ -175,7 +175,7 @@ public class PemainTerbaikActivity extends AppCompatActivity {
                     int other = defence + serangan + speed + body + handling + rebound + response + jump + fisik + kehadiran;
 
                     int total = totalDribble + totalShooting + totalPass + other;
-
+                    total = check(total);
 
                     for (int j = 0; j < data.size(); j++) {
                         try {
@@ -189,7 +189,7 @@ public class PemainTerbaikActivity extends AppCompatActivity {
 
                     if (total > 400) {
                         data.get(i).setMasuk(true);
-                    } else{
+                    } else {
                         data.get(i).setMasuk(false);
                     }
                     data.get(i).setTotal(total);
@@ -201,6 +201,7 @@ public class PemainTerbaikActivity extends AppCompatActivity {
         }
         adapter.swap(data);
     }
+
 
     public void showProgress() {
         progressDialog = new ProgressDialog(this);
@@ -247,5 +248,9 @@ public class PemainTerbaikActivity extends AppCompatActivity {
 
                     }
                 });
+    }
+
+    private int check(int total) {
+        return total / 5;
     }
 }
