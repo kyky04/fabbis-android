@@ -29,7 +29,7 @@ public class Topsis {
      *
      * @return an array with the alternatives's ranking.
      */
-    public double[] TopsisMethod() {
+    public double[] TopsisMethod() throws IndexOutOfBoundsException{
 
         for (int i = 0; i < criteria.length; ++i) {
             for (int j = 0; j < criteria[i].length; ++j) {

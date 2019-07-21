@@ -14,6 +14,7 @@ import android.widget.Toast;
 import androidx.fragment.app.DialogFragment;
 
 import com.androidnetworking.AndroidNetworking;
+import com.androidnetworking.common.ANRequest;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.OkHttpResponseListener;
 import com.androidnetworking.interfaces.ParsedRequestListener;
@@ -166,7 +167,7 @@ public class FragmentInputNilai extends DialogFragment {
 
                 Glide.with(getActivity()).load(Contans.STORAGE + pemain.getFoto()).into(imgFoto);
 
-                layButton.setVisibility(View.GONE);
+//                layButton.setVisibility(View.GONE);
             }
         } else {
             etDribble1.setText("50");
@@ -252,7 +253,12 @@ public class FragmentInputNilai extends DialogFragment {
 
     public void post() {
         showProgress();
-        AndroidNetworking.post(NILAI)
+        ANRequest.PostRequestBuilder postRequestBuilder = new ANRequest.PostRequestBuilder(NILAI);
+        if (pemain.getNilai() != null) {
+            postRequestBuilder = new ANRequest.PostRequestBuilder(NILAI + "/" + pemain.getNilai().getId());
+            postRequestBuilder.addBodyParameter("_method", "PUT");
+        }
+        postRequestBuilder
                 .addBodyParameter("id_pemain", String.valueOf(pemain.getId()))
                 .addBodyParameter("dribble1", etDribble1.getText().toString())
                 .addBodyParameter("dribble2", etDribble2.getText().toString())
@@ -273,6 +279,13 @@ public class FragmentInputNilai extends DialogFragment {
                 .addBodyParameter("defence", etDefence.getText().toString())
                 .addBodyParameter("speed", etSpeed.getText().toString())
                 .addBodyParameter("serangan", etSerangan.getText().toString())
+                .addBodyParameter("body_balance", etBodyBalance.getText().toString())
+                .addBodyParameter("ball_handling", etBallHandling.getText().toString())
+                .addBodyParameter("rebound", etRebound.getText().toString())
+                .addBodyParameter("response", etResponse.getText().toString())
+                .addBodyParameter("jump", etJump.getText().toString())
+                .addBodyParameter("fisik", etFisik.getText().toString())
+                .addBodyParameter("kehadiran", etKehadiranLatihan.getText().toString())
                 .build()
                 .getAsOkHttpResponse(new OkHttpResponseListener() {
                     @Override

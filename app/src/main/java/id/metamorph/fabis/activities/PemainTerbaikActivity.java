@@ -116,14 +116,6 @@ public class PemainTerbaikActivity extends AppCompatActivity {
                                 proses(data);
 
                                 //proses topsis
-                                for (int i = 0; i < data.size(); i++) {
-                                    try {
-                                        Topsis topsis = new Topsis(data.size(), data.get(i).getId());
-                                        topsis.TopsisMethod();
-                                    } catch (NullPointerException e) {
-                                        e.printStackTrace();
-                                    }
-                                }
 
 
                             } else {
@@ -151,12 +143,53 @@ public class PemainTerbaikActivity extends AppCompatActivity {
                     int dribble4 = Integer.parseInt(data.get(i).getNilai().getDribble4());
                     int dribble5 = Integer.parseInt(data.get(i).getNilai().getDribble5());
                     int dribble6 = Integer.parseInt(data.get(i).getNilai().getDribble6());
+                    int dribble7 = Integer.parseInt(data.get(i).getNilai().getDribble7());
+                    int dribble8 = Integer.parseInt(data.get(i).getNilai().getDribble8());
 
-                    int total = dribble1 + dribble2 + dribble3 + dribble3 + dribble4 + dribble5 + dribble6;
+                    int shooting1 = Integer.parseInt(data.get(i).getNilai().getShooting1());
+                    int shooting2 = Integer.parseInt(data.get(i).getNilai().getShooting2());
+                    int shooting3 = Integer.parseInt(data.get(i).getNilai().getShooting3());
+                    int shooting4 = Integer.parseInt(data.get(i).getNilai().getShooting4());
 
-                    if (total > 50) {
+
+                    int pass1 = Integer.parseInt(data.get(i).getNilai().getPass1());
+                    int pass2 = Integer.parseInt(data.get(i).getNilai().getPass2());
+                    int pass3 = Integer.parseInt(data.get(i).getNilai().getPass3());
+                    int pass4 = Integer.parseInt(data.get(i).getNilai().getPass4());
+
+                    int defence = Integer.parseInt(data.get(i).getNilai().getDefence());
+                    int serangan = Integer.parseInt(data.get(i).getNilai().getSerangan());
+                    int speed = Integer.parseInt(data.get(i).getNilai().getSpeed());
+                    int body = Integer.parseInt(data.get(i).getNilai().getBody_balance());
+                    int handling = Integer.parseInt(data.get(i).getNilai().getBall_handling());
+                    int rebound = Integer.parseInt(data.get(i).getNilai().getRebound());
+                    int response = Integer.parseInt(data.get(i).getNilai().getResponse());
+                    int jump = Integer.parseInt(data.get(i).getNilai().getJump());
+                    int fisik = Integer.parseInt(data.get(i).getNilai().getFisik());
+                    int kehadiran = Integer.parseInt(data.get(i).getNilai().getKehadiran());
+
+
+                    int totalDribble = dribble1 + dribble2 + dribble3 + dribble3 + dribble4 + dribble5 + dribble6 + dribble7 + dribble8;
+                    int totalShooting = shooting1 + shooting2 + shooting3 + shooting4;
+                    int totalPass = pass1 + pass2 + pass3 + pass4;
+                    int other = defence + serangan + speed + body + handling + rebound + response + jump + fisik + kehadiran;
+
+                    int total = totalDribble + totalShooting + totalPass + other;
+
+
+                    for (int j = 0; j < data.size(); j++) {
+                        try {
+                            Topsis topsis = new Topsis(data.size(), data.get(j).getId());
+                            topsis.TopsisMethod();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+
+                    if (total > 400) {
                         data.get(i).setMasuk(true);
-                    } else {
+                    } else{
                         data.get(i).setMasuk(false);
                     }
                     data.get(i).setTotal(total);

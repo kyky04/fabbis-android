@@ -741,7 +741,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_bold"
-                        android:text="23. Jump (lompatan)" />
+                        android:text="24. Jump (lompatan)" />
 
                     <EditText
                         android:id="@+id/et_jump"
@@ -767,7 +767,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_bold"
-                        android:text="23. Fisik Pemain" />
+                        android:text="25. Fisik Pemain" />
 
                     <EditText
                         android:id="@+id/et_fisik"
@@ -793,7 +793,7 @@
                         android:layout_marginLeft="@dimen/spacing_medium"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_bold"
-                        android:text="24. Kehadiran Latihan" />
+                        android:text="26. Kehadiran Latihan" />
 
                     <EditText
                         android:id="@+id/et_kehadiran_latihan"
