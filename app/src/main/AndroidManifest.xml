@@ -29,9 +29,10 @@
         <activity android:name="id.metamorph.fabis.activities.PemainActivity"></activity>
         <activity android:name="id.metamorph.fabis.activities.PosisiActivity"></activity>
         <activity android:name="id.metamorph.fabis.activities.MenuDetailActivity"></activity>
-        <activity android:name="id.metamorph.fabis.activities.PemainPenialaianActivity"></activity>
+        <activity android:name="id.metamorph.fabis.activities.PemainPenilaianActivity"></activity>
         <activity android:name="id.metamorph.fabis.activities.PemainTerbaikActivity"></activity>
         <activity android:name="id.metamorph.fabis.activities.PosisiTerbaikActivity"></activity>
+        <activity android:name="id.metamorph.fabis.activities.PemainHasilActivity"></activity>
     </application>
 
 </manifest>

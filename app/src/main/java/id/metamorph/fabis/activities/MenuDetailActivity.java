@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import id.metamorph.fabis.MainActivity;
 import id.metamorph.fabis.R;
 
 public class MenuDetailActivity extends AppCompatActivity {
@@ -64,7 +63,7 @@ public class MenuDetailActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_penilaian:
-                intent = new Intent(MenuDetailActivity.this, PemainPenialaianActivity.class);
+                intent = new Intent(MenuDetailActivity.this, PemainPenilaianActivity.class);
                 intent.putExtra("gender", jk);
                 startActivity(intent);
                 break;

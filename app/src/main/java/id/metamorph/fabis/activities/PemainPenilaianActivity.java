@@ -25,7 +25,7 @@ import id.metamorph.fabis.utils.ActivityUtils;
 
 import static id.metamorph.fabis.data.Contans.PEMAIN;
 
-public class PemainPenialaianActivity extends AppCompatActivity {
+public class PemainPenilaianActivity extends AppCompatActivity {
 
 
     @BindView(R.id.recycler)
@@ -70,7 +70,7 @@ public class PemainPenialaianActivity extends AppCompatActivity {
             @Override
             public void onClick(DataItemPemain item) {
                 FragmentInputNilai fragment = FragmentInputNilai.newInstance(item);
-                ActivityUtils.addFragment(PemainPenialaianActivity.this, android.R.id.content, fragment);
+                ActivityUtils.addFragment(PemainPenilaianActivity.this, android.R.id.content, fragment);
                 fragment.setListener(new FragmentInputNilai.OnFragmentInteractionListener() {
                     @Override
                     public void onFragmentInteraction() {
@@ -87,7 +87,7 @@ public class PemainPenialaianActivity extends AppCompatActivity {
     @OnClick(R.id.fab_add)
     public void onViewClicked() {
         FragmentInputNilai fragment = new FragmentInputNilai();
-        ActivityUtils.addFragment(PemainPenialaianActivity.this, android.R.id.content, fragment);
+        ActivityUtils.addFragment(PemainPenilaianActivity.this, android.R.id.content, fragment);
         fragment.setListener(new FragmentInputNilai.OnFragmentInteractionListener() {
             @Override
             public void onFragmentInteraction() {
@@ -112,10 +112,10 @@ public class PemainPenialaianActivity extends AppCompatActivity {
                             if (((PemainResponse) response).isStatus()) {
                                 adapter.swap(((PemainResponse) response).getData());
                             } else {
-                                Toast.makeText(PemainPenialaianActivity.this, "Kesalahan Teknis !", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(PemainPenilaianActivity.this, "Kesalahan Teknis !", Toast.LENGTH_SHORT).show();
                             }
                         } else {
-                            Toast.makeText(PemainPenialaianActivity.this, "Kesalahan Teknis !", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(PemainPenilaianActivity.this, "Kesalahan Teknis !", Toast.LENGTH_SHORT).show();
                         }
                     }
 

@@ -13,6 +13,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import id.metamorph.fabis.activities.MenuDetailActivity;
 import id.metamorph.fabis.activities.PemainActivity;
+import id.metamorph.fabis.activities.PemainHasilActivity;
 import id.metamorph.fabis.activities.PosisiActivity;
 import id.metamorph.fabis.data.Session;
 import id.metamorph.fabis.utils.DialogUtils;
@@ -59,7 +60,7 @@ public class MainPelatihActivity extends AppCompatActivity {
                 DialogUtils.dialogArray(MainPelatihActivity.this, strings, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(MainPelatihActivity.this, PemainActivity.class);
+                        Intent intent = new Intent(MainPelatihActivity.this, PemainHasilActivity.class);
                         if (which == 0) {
                             intent.putExtra("gender", 0);
                         } else {

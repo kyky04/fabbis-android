@@ -75,10 +75,10 @@ public class PemainTerbaikAdapter extends RecyclerView.Adapter<PemainTerbaikAdap
 
         Glide.with(context).load(Contans.STORAGE + item.getFoto()).into(holder.imgFoto);
 
-        if (item.isMasuk() && item.getTotal() > 400 && item.getTotal() < 600) {
-            holder.tvStatus.setText("Layak");
-        } else if (item.isMasuk() && item.getTotal() > 600) {
+        if (item.isMasuk() && item.getTotal() > 500 ) {
             holder.tvStatus.setText("Sangat Layak");
+        } else if (item.isMasuk() && item.getTotal() > 300) {
+            holder.tvStatus.setText("Layak");
         } else {
             holder.tvStatus.setText("Kurang Layak");
         }
